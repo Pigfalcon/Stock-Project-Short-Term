@@ -8,6 +8,10 @@ Original file is located at
 """
 
 import pandas as pd
+import yfinance as yf
+import time
+import os
+from google.colab import drive
 
 url = "https://tickerinside.com/api/v1/fund/iwm.csv"
 
@@ -16,12 +20,6 @@ holdings = pd.read_csv(url)
 print("Rows downloaded:", len(holdings))
 print("Columns:", holdings.columns.tolist())
 display(holdings.head())
-
-import pandas as pd
-import yfinance as yf
-import time
-import os
-from google.colab import drive
 
 # 1. Connect Google Drive
 drive.mount('/content/drive')
